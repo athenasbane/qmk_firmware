@@ -13,7 +13,7 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/  
+*/
 
 #pragma once
 
@@ -40,16 +40,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Debounce reduces chatter */
 #define DEBOUNCE 5
 
-/* RGB matrix lighting */ 
+/* RGB matrix lighting */
 #define RGB_DI_PIN B1
 #define DRIVER_LED_TOTAL 62
 #define RGB_MATRIX_KEYPRESSES
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
-#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 160   // limit brightness to not overamp the USB
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 130   // limit brightness to not overamp the USB
 #define RGB_MATRIX_LED_FLUSH_LIMIT 16       // 16 is equivalent to limiting to 60fps
 #define RGB_DISABLE_AFTER_TIMEOUT 0         // number of ticks to wait until disabling effects
 #define RGB_DISABLE_WHEN_USB_SUSPENDED      // turn off effects when suspended
-#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_ALL
+#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_BREATHING
+#define RGB_MATRIX_STARTUP_HUE 80
 
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
