@@ -56,16 +56,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void rgb_matrix_indicators_user(void)
 {
+    HSV hsv = { 0, 255, 255 };
+    if(hsv.v > rgb_matrix_get_val())
+    {
+            hsv.v = rgb_matrix_get_val();
+    }
+    RGB rgb = hsv_to_rgb(hsv);
  	if (host_keyboard_led_state().caps_lock)
 	{
-		rgb_matrix_set_color(28, RGB_RED);
+		rgb_matrix_set_color(28, rgb.r, rgb.g, rgb.b);
 	}
 	if (IS_LAYER_ON(_0))
 	{
-		rgb_matrix_set_color(42, RGB_RED);
-        rgb_matrix_set_color(58, RGB_RED);
-        rgb_matrix_set_color(59, RGB_RED);
-        rgb_matrix_set_color(60, RGB_RED);
+		rgb_matrix_set_color(42, rgb.r, rgb.g, rgb.b);
+        rgb_matrix_set_color(58, rgb.r, rgb.g, rgb.b);
+        rgb_matrix_set_color(59, rgb.r, rgb.g, rgb.b);
+        rgb_matrix_set_color(60, rgb.r, rgb.g, rgb.b);
 	}
 	if (IS_LAYER_ON(_1))
 	{
