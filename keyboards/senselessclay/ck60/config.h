@@ -51,6 +51,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_DISABLE_WHEN_USB_SUSPENDED      // turn off effects when suspended
 #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_BREATHING
 #define RGB_MATRIX_STARTUP_HUE 80
+#define TAPPING_TERM 200
 
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
